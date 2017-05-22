@@ -15,21 +15,26 @@ LightningStreamer
 <c:Streamer topic="someTopicYouMade"/>
 ```
 
+or
+
+<c:Streamer platformEvent="My_Event__e"/>
+
+
 other components should listen thusly:
 
 ```
 <aura:handler event="c:StreamerEvent" action="{!c.doSomething}"/>
-``` 
+```
 in the controller handler function:
 
 ```
 var message = event.getParam("message");
 ```
- 
-the message is the typical streaming api message: message.data.sobject
+
+the message is the typical streaming api message: message.data.sobject (streaming topic) or message.data.payload (events)
 
 
 ###Philosopy
-Streamer is very stupid, it just listens and repeats everthing it hears--no traffic control or directed communications. 
+Streamer is very stupid, it just listens and repeats everthing it hears--no traffic control or directed communications.
 
 It's the job of the other components to handle all messages, deciding what they should do with them, if anything.
