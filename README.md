@@ -1,14 +1,14 @@
 LightningStreamer
 
 1. gets a sessionId via apex
-2. subscribes to a push topic that you set as an attribute
+2. subscribes to a push topic or platform event that you set as an attribute
 3. listens for messages, and emits the messages uncensored as a lightning *application* event
 4. Then your other components listen for that event
 
 ###Setup
 
 * Install
-* create a push topic (google if you don't know how)
+* create a push topic or platform event (google if you don't know how)
 * use in another component or in your app like this
 
 ```
@@ -17,8 +17,9 @@ LightningStreamer
 
 or
 
+```
 <c:Streamer platformEvent="My_Event__e"/>
-
+```
 
 other components should listen thusly:
 
