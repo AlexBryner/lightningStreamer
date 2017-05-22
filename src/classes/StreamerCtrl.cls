@@ -4,4 +4,6 @@ public class StreamerCtrl {
     public static String sessionId() {
         return UserInfo.getSessionId();
     }
+
+    
 }
