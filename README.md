@@ -5,7 +5,7 @@ LightningStreamer
 3. listens for messages, and emits the messages uncensored as a lightning *application* event
 4. Then your other components listen for that event
 
-###Setup
+### Setup
 
 * Install
 * create a push topic or platform event (google if you don't know how)
@@ -35,7 +35,12 @@ var message = event.getParam("message");
 the message is the typical streaming api message: message.data.sobject (streaming topic) or message.data.payload (events)
 
 
-###Philosopy
+### Philosopy
 Streamer is very stupid, it just listens and repeats everthing it hears--no traffic control or directed communications.
 
 It's the job of the other components to handle all messages, deciding what they should do with them, if anything.
+
+<a href="https://githubsfdeploy.herokuapp.com?owner=mshanemc&repo=LightningStreamer">
+  <img alt="Deploy to Salesforce"
+       src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png"/>
+</a>
