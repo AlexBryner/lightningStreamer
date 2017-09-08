@@ -2,7 +2,7 @@ LightningStreamer
 
 1. gets a sessionId via apex
 2. subscribes to a push topic or platform event that you set as an attribute
-3. listens for messages, and emits the messages uncensored as a lightning *application* event
+3. listens for messages, and emits the messages uncensored as a lightning standard *application* event
 4. Then your other components listen for that event
 
 ### Setup
@@ -24,12 +24,14 @@ or
 other components should listen thusly:
 
 ```
-<aura:handler event="c:StreamerEvent" action="{!c.doSomething}"/>
+<aura:handler event="ltng:sendMessage" action="{!c.doSomething}"/>
+
 ```
 in the controller handler function:
 
 ```
 var message = event.getParam("message");
+var channel = event.getParam("channel"); //channel = 'streamingAPISubscriber'
 ```
 
 the message is the typical streaming api message: message.data.sobject (streaming topic) or message.data.payload (events)
