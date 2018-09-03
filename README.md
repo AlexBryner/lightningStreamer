@@ -1,3 +1,17 @@
+# Deprecated.  Archived.
+
+## You should not use this for anything--use the new lightning:empApi (winter19 release).
+
+
+
+
+
+
+
+
+
+---
+
 LightningStreamer
 
 1. gets a sessionId via apex
