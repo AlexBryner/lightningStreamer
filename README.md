@@ -1,6 +1,6 @@
 # Deprecated.  Archived.
 
-## You should not use this for anything--use the new lightning:empApi (winter19 release).
+## The new lightning:empApi (winter19 release) is the best way to stream events within Lightning Experience and Mobile, but is not yet supported in communities.
 
 
 
